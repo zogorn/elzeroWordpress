@@ -21,6 +21,7 @@ function elzero_scripts() {
    wp_enqueue_script('my-main-script', get_template_directory_uri() . 'assets/js/main.js', array(), '1.0.0', true);
 }
 
+
 /*
 ** Add actions
 ** add_action();
