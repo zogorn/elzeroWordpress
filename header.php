@@ -11,3 +11,4 @@
       <!-- make wordpress add its functions -->
       <?php wp_head(); ?>
    </head>
+   <body>

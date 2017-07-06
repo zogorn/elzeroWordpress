@@ -1,9 +1,12 @@
 <?php
 /*
-** to add the style sheet correctly with wp method
+** // To add the style sheet correctly with wp method
 ** wp_enqueue_style($handle, $src = '', array $deps = array(),|bool|null $ver = false, $media = 'all')
 ** https://developer.wordpress.org/reference/functions/wp_enqueue_style/
-** to get the template directory
+** // To add the script sheet correctly with wp method
+** wp_enqueue_script($handle, $src = '', array $deps = array(),|bool|null $ver = false, $media = 'all')
+** https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+** // To get the template directory
 ** get_template_directory_uri();
 */
 
@@ -17,3 +20,13 @@ function elzero_style() {
 function elzero_scripts() {
    wp_enqueue_script('my-main-script', get_template_directory_uri() . 'assets/js/main.js', array(), '1.0.0', true);
 }
+
+/*
+** Add actions
+** add_action();
+** // Add styles and scripts to the front end pages
+** wp_enqueue_scripts
+*/
+
+add_action('wp_enqueue_scripts', 'elzero_style');
+add_action('wp_enqueue_scripts', 'elzero_scripts');
