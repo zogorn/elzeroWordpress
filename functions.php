@@ -27,6 +27,8 @@ function elzero_scripts() {
 ** add_action();
 ** // Add styles and scripts to the front end pages
 ** wp_enqueue_scripts
+** // Register styles and scripts and make it ready to call it back any where in the wordpress
+** wp_register_scripts
 */
 
 add_action('wp_enqueue_scripts', 'elzero_style');
