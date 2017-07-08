@@ -50,3 +50,22 @@ function elzero_scripts() {
 
 add_action('wp_enqueue_scripts', 'elzero_style');
 add_action('wp_enqueue_scripts', 'elzero_scripts');
+
+
+/*
+** add function menu
+** register_nav_menu('location', __('description'));
+** register_nav_menus(array(
+   'location-1' => 'descriptions-1',
+   'location-2' => 'description-2'
+));
+*/
+
+function elzero_add_menu() {
+   register_nav_menu('manin-menu', __('Main Navigation Menu'));
+   // register_nav_menus(array(
+   //    'main-menu' => 'main navigation bar menu'
+   // ));
+}
+
+add_action('init', 'elzero_add_menu');
