@@ -19,6 +19,7 @@
 // define styles
 function elzero_style() {
    wp_enqueue_style('font-awesome-style' , get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(),'4.7.0');
+   wp_enqueue_style('bootstrap-style' , get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(),'4.0.0-alpha.6');
    wp_enqueue_style('my-style' , get_template_directory_uri() . '/assets/css/style.min.css', array(),'1.0.0');
 }
 
@@ -31,6 +32,8 @@ function elzero_scripts() {
    // add the jquery to the front-end pages
    wp_enqueue_script('jquery');
    // add the theme js file to the front-end pages
+   wp_enqueue_script('tether-script', get_template_directory_uri() . '/assets/js/tether.min.js', array(), '1.3.3', true);
+   wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '4.0.0-alpha.6', true);
    wp_enqueue_script('my-main-script', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true);
    // add html5shiv to the header
    wp_enqueue_script('html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.js', array(), '3.7.3', false);
