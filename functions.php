@@ -45,17 +45,6 @@ function elzero_scripts() {
 
 
 /*
-** Add actions
-** add_action();
-** // Add styles and scripts to the front end pages
-** wp_enqueue_scripts
-*/
-
-add_action('wp_enqueue_scripts', 'elzero_style');
-add_action('wp_enqueue_scripts', 'elzero_scripts');
-
-
-/*
 ** add function menu
 ** register_nav_menu('location', __('description'));
 ** register_nav_menus(array(
@@ -71,4 +60,18 @@ function elzero_add_menu() {
    // ));
 }
 
+function bootstrap_nav_menu() {
+   wp_nav_menu();
+}
+
+
+/*
+** Add actions
+** add_action();
+** // Add styles and scripts to the front end pages
+** wp_enqueue_scripts
+*/
+
+add_action('wp_enqueue_scripts', 'elzero_style');
+add_action('wp_enqueue_scripts', 'elzero_scripts');
 add_action('init', 'elzero_add_menu');
