@@ -1,4 +1,5 @@
 <?php
+require_once('wp-nav-walker.php');
 /*
 ** // To add the style sheet correctly with wp method
 ** wp_enqueue_style($handle, $src = '', array $deps = array(),|bool|null $ver = false, $media = 'all')
@@ -54,14 +55,22 @@ function elzero_scripts() {
 */
 
 function elzero_add_menu() {
-   register_nav_menu('manin-menu', __('Main Navigation Menu'));
-   // register_nav_menus(array(
-   //    'main-menu' => 'main navigation bar menu'
-   // ));
+   // register_nav_menu('manin-menu', __('Main Navigation Menu'));
+   register_nav_menus(array(
+      'main-menu' => 'Main Navigation Menu',
+      'footer-menu' => 'Footer Classic Menu'
+   ));
 }
 
 function bootstrap_nav_menu() {
-   wp_nav_menu();
+   wp_nav_menu(array(
+      'theme_location'  => 'main-menu',
+      'menu_class'      => 'navbar-nav ml-auto',
+      'container'        => false,
+      'depth'            => 2,
+      'fallback_cb'      => 'bs4navwalker::fallback',
+      'walker'           => new bs4navwalker()
+   ));
 }
 
 

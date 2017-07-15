@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-   <!-- add languages attributes automatic from wordpress -->
-   <head <?php language_attributes(); ?>>
+<!-- add languages attributes automatic from wordpress -->
+<html <?php language_attributes(); ?>>
+   <head>
       <!-- add meta chraset automatic from wordpress -->
       <meta charset="<?php bloginfo('charset'); ?>">
       <!-- add site name in feature applications will be the_title(); with if conditions -->
@@ -16,8 +16,13 @@
          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
          </button>
-         <a class="navbar-brand" href="#">Navbar</a>
+         <a class="navbar-brand" href="#">Elzero WordPress</a>
          <div class="collapse navbar-collapse" id="main-navbar">
             <?php bootstrap_nav_menu(); ?>
+            <!-- <ul class="navbar-nav ml-auto">
+               <li class="nav-item active">
+                 <a class="nav-link" href="#">Home</a>
+               </li>
+            </ul> -->
          </div>
       </nav>
