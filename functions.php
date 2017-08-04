@@ -1,5 +1,8 @@
 <?php
 require_once('wp-nav-walker.php');
+
+// add futured image
+add_theme_support('post-thumbnails');
 /*
 ** // To add the style sheet correctly with wp method
 ** wp_enqueue_style($handle, $src = '', array $deps = array(),|bool|null $ver = false, $media = 'all')
