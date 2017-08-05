@@ -40,7 +40,16 @@
                   </div><!-- content -->
                   <div class="tags text-uppercase">
                      <i class="fa fa-tags fa-fw text-muted" aria-hidden="true"></i>
-                     <span><?php the_category(' , ') ?></span>
+                     <span class="category"><?php the_category(' , ') ?></span>
+                     <span class="tag">
+                        <?php
+                           if (has_tag()) {
+                              the_tags();
+                           } else {
+                              echo "tags: there is no tags";
+                           }
+                        ?>
+                     </span>
                   </div><!-- tags -->
                </div><!-- blog-post -->
             </div><!-- col-md-6 -->
