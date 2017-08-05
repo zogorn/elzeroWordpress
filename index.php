@@ -32,7 +32,10 @@
                   </div><!-- image -->
                   <div class="content text-justify">
                      <p class="lead text-muted">
-                        <?php the_content('Read More...') ?>
+                        <?php the_excerpt() ?>
+                        <a href="<?php the_permalink() ?>">
+                           Read More...
+                        </a>
                      </p>
                   </div><!-- content -->
                   <div class="tags text-uppercase">
