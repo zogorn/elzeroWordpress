@@ -76,6 +76,19 @@ function bootstrap_nav_menu() {
    ));
 }
 
+/*
+** Add functions and filters
+** 1- excerpt_length
+** 2- excerpt_more
+*/
+function elzero_extend_excert_length($length) {
+   return 30;
+}
+function elzero_extend_excert_more($more) {
+   return ' ...';
+}
+add_filter('excerpt_length', 'elzero_extend_excert_length');
+add_filter('excerpt_more', 'elzero_extend_excert_more');
 
 /*
 ** Add actions
