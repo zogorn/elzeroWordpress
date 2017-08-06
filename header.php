@@ -16,7 +16,7 @@
          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
          </button>
-         <a class="navbar-brand" href="#">Elzero WordPress</a>
+         <a class="navbar-brand text-capitalize" href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a>
          <div class="collapse navbar-collapse" id="main-navbar">
             <?php bootstrap_nav_menu(); ?>
             <!-- <ul class="navbar-nav ml-auto">
