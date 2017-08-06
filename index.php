@@ -56,17 +56,20 @@
    <?php endwhile;
    endif; ?>
 
+
 <?php
+echo "<div class='posts-pagination'>";
 if (get_previous_posts_link()) {
-   previous_posts_link('Prev');
+   previous_posts_link('<i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Prev');
 } else {
-   echo "No Prev";
+   echo '<span class="prev-span"><i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Prev</span>';
 }
 if (get_next_posts_link()) {
-   next_posts_link('Next');
+   next_posts_link('Next <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>');
 } else {
-   echo "No Next";
+   echo '<span class="next-span">Next <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i></span>';
 }
+echo "</div>";
  ?>
 
 

@@ -28,3 +28,21 @@
       .tag
          display: block
          margin-top: 10px
+
+.posts-pagination
+   margin: 30px auto
+   a
+      display: inline-block
+      background: #FFF
+      padding: 15px 25px
+      border: 1px solid #DDD
+      border-radius: 7px
+      &:first-of-type
+         margin-right: 15px
+   span
+      @extend a
+      &:first-of-type
+         margin-right: 0
+      cursor: not-allowed
+      &.prev-span
+         margin-right: 15px
