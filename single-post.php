@@ -24,6 +24,9 @@
                      <span><i class="fa fa-comments fa-fw text-muted" aria-hidden="true"></i>
                         <?php comments_popup_link('0 comments', '1 comment', '% comments', 'comments desabled') ?>
                      </span>
+                     <span><i class="fa fa-pencil-square-o fa-fw text-muted" aria-hidden="true"></i>
+                        <?php edit_post_link('Edit Post') ?>
+                     </span>
                   </div><!-- heading -->
                   <div class="image">
                      <?php the_post_thumbnail('', ['class' => 'image-responsive img-thumbnail']) ?>
@@ -54,13 +57,13 @@
 
 <?php
 echo "<div class='posts-pagination'>";
-if (get_previous_posts_link()) {
-   previous_posts_link('<i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Prev');
+if (get_previous_post_link()) {
+   previous_post_link();
 } else {
    echo '<span class="prev-span"><i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Prev</span>';
 }
-if (get_next_posts_link()) {
-   next_posts_link('Next <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>');
+if (get_next_post_link()) {
+   next_post_link();
 } else {
    echo '<span class="next-span">Next <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i></span>';
 }
