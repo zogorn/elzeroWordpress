@@ -23,4 +23,10 @@
    - wp_list_comments()
 ******
 
+******
+72 - Post Comments
+   == show comments Number
+   - comments_number('0 comment message', '1 comment message', '% comments message')
+******
+
 */
