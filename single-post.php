@@ -58,14 +58,14 @@
 <?php
 echo "<div class='posts-pagination'>";
 if (get_previous_post_link()) {
-   previous_post_link();
+   previous_post_link('%link', '<i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Previous Article');
 } else {
-   echo '<span class="prev-span"><i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Prev</span>';
+   echo '<span class="prev-span"><i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Previous Article None</span>';
 }
 if (get_next_post_link()) {
-   next_post_link();
+   next_post_link('%link', 'Next Article <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>');
 } else {
-   echo '<span class="next-span">Next <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i></span>';
+   echo '<span class="next-span">Next Article None <i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i></span>';
 }
 echo "</div>";
  ?>
