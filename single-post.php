@@ -70,8 +70,13 @@ if (get_next_post_link()) {
 echo "</div>";
  ?>
 
-
    </div><!-- row -->
+   
+   <div class="post-comments">
+      <?php comments_template(); ?>
+   </div><!-- post-comments -->
+
+
 </div><!-- container -->
 
 
