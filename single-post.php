@@ -24,8 +24,10 @@
                      <span><i class="fa fa-comments fa-fw text-muted" aria-hidden="true"></i>
                         <?php comments_popup_link('0 comments', '1 comment', '% comments', 'comments desabled') ?>
                      </span>
-                     <span><i class="fa fa-pencil-square-o fa-fw text-muted" aria-hidden="true"></i>
-                        <?php edit_post_link('Edit Post') ?>
+                     <span>
+                        <?php
+                        edit_post_link('Edit Post','<i class="fa fa-pencil-square-o fa-fw text-muted" aria-hidden="true"></i>');
+                         ?>
                      </span>
                   </div><!-- heading -->
                   <div class="image">
@@ -71,7 +73,7 @@ echo "</div>";
  ?>
 
    </div><!-- row -->
-   
+
    <div class="post-comments">
       <?php comments_template(); ?>
    </div><!-- post-comments -->
