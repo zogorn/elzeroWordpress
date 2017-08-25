@@ -29,4 +29,14 @@
    - comments_number('0 comment message', '1 comment message', '% comments message')
 ******
 
+******
+73 - Post Comments Style
+******
+
+******
+74 - Post Comments Form
+   == enable add comment form
+   - comment_form()
+******
+
 */
