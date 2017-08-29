@@ -56,6 +56,23 @@
    <?php endwhile;
    endif; ?>
 
+<div class="post-author">
+   <div class="col-sm-12">
+      <h4 class="text-capitalize"><?php
+         the_author_meta('first_name');
+         the_author_meta('last_name'); - 
+         the_author_meta('nickname');
+      ?></h4>
+      <p class="text-muted"><?php
+         if (get_the_author_meta('description')) {
+            the_author_meta('description');
+         } else {
+            echo "Some Times Silence is Golden";
+         }
+      ?></p>
+   </div><!-- col-xs-12 -->
+</div><!-- post-author -->
+
 
 <?php
 echo "<div class='posts-pagination'>";

@@ -39,4 +39,20 @@
    - comment_form()
 ******
 
+******
+77 - post Author
+   - get_the_author_meta()
+   - get_the_author()
+   - the_author_meta()
+   ---------------------
+   == Get the user information from usermeta database table
+      1- the_author_meta('first_name'); // get the author first name from database usermeta table
+      2- the_author_meta('last_name'); // get the author last name from database usermeta table
+      3- the_author_meta('nickname'); // get the author nickname from database usermeta table
+      4- the_author_meta('description'); // get the author description information from database usermeta table
+   ----------------------
+   == Check if any meta there
+      - get_the_author_meta('table-name'); // check if the table-name exist
+******
+
 */

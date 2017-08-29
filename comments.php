@@ -19,6 +19,7 @@ if (comments_open()) {
       wp_list_comments($comments_props);
    echo "</ul>";
 
+   // comment form
    comment_form();
 
 
