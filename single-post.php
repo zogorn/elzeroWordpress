@@ -80,10 +80,15 @@
                   echo "Some Times Silence is Golden";
                }
             ?></p>
+
          </div><!-- col-md-10 -->
       </div><!-- row -->
-
-
+      <div class="post-author-counters">
+         <p>
+            User Posts Counter: <?php echo count_user_posts(get_the_author_meta('ID')); ?>
+             User Posts URL: <?php the_author_posts_link(); ?>
+         </p>
+      </div><!-- post-author-counters -->
    </div><!-- col-xs-12 -->
 </div><!-- post-author -->
 

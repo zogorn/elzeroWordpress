@@ -64,4 +64,10 @@
 79 - Author Avatar Style
 ******
 
+******
+80 - Author Posts and Link
+   - count_user_posts(userID);
+   - the_author_posts_link();
+******
+
 */
