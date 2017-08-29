@@ -58,12 +58,18 @@
 
 <div class="post-author">
    <div class="col-sm-12">
-      <h4 class="text-capitalize"><?php
-         the_author_meta('first_name');
-         the_author_meta('last_name'); - 
-         the_author_meta('nickname');
+      <div class="post-author-avatar"><?php
+         $avatar_args = array(
+            'class' => 'img-responsive img-thumbnail'
+         );
+         echo get_avatar(get_the_author_meta('ID'), 96, '', 'User Avatar', $avatar_args);
+      ?></div><!-- post-author-avatar -->
+      <h4 class="post-author-name text-capitalize"><?php
+         the_author_meta('first_name'); echo " ";
+         the_author_meta('last_name'); echo " (";
+         the_author_meta('nickname'); echo ")";
       ?></h4>
-      <p class="text-muted"><?php
+      <p class="post-author-description text-muted"><?php
          if (get_the_author_meta('description')) {
             the_author_meta('description');
          } else {

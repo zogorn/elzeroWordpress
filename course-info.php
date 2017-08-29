@@ -55,4 +55,9 @@
       - get_the_author_meta('table-name'); // check if the table-name exist
 ******
 
+******
+78 - Author Avatar
+   - get_avatar($usrID or mail); => HINT: you can bring it using get_the_author_meta('ID');
+******
+
 */
