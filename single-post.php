@@ -58,24 +58,32 @@
 
 <div class="post-author">
    <div class="col-sm-12">
-      <div class="post-author-avatar"><?php
-         $avatar_args = array(
-            'class' => 'img-responsive img-thumbnail'
-         );
-         echo get_avatar(get_the_author_meta('ID'), 96, '', 'User Avatar', $avatar_args);
-      ?></div><!-- post-author-avatar -->
-      <h4 class="post-author-name text-capitalize"><?php
-         the_author_meta('first_name'); echo " ";
-         the_author_meta('last_name'); echo " (";
-         the_author_meta('nickname'); echo ")";
-      ?></h4>
-      <p class="post-author-description text-muted"><?php
-         if (get_the_author_meta('description')) {
-            the_author_meta('description');
-         } else {
-            echo "Some Times Silence is Golden";
-         }
-      ?></p>
+      <div class="row">
+         <div class="col-md-1">
+            <div class="post-author-avatar"><?php
+               $avatar_args = array(
+                  'class' => 'img-responsive img-thumbnail'
+               );
+               echo get_avatar(get_the_author_meta('ID'), 65, '', 'User Avatar', $avatar_args);
+            ?></div><!-- post-author-avatar -->
+         </div><!-- col-md-1 -->
+         <div class="col-md-11">
+            <h4 class="post-author-name text-capitalize"><?php
+               the_author_meta('first_name'); echo " ";
+               the_author_meta('last_name'); echo " (";
+               the_author_meta('nickname'); echo ")";
+            ?></h4>
+            <p class="post-author-description text-muted"><?php
+               if (get_the_author_meta('description')) {
+                  the_author_meta('description');
+               } else {
+                  echo "Some Times Silence is Golden";
+               }
+            ?></p>
+         </div><!-- col-md-10 -->
+      </div><!-- row -->
+
+
    </div><!-- col-xs-12 -->
 </div><!-- post-author -->
 

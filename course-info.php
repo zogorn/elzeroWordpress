@@ -60,4 +60,8 @@
    - get_avatar($usrID or mail); => HINT: you can bring it using get_the_author_meta('ID');
 ******
 
+******
+79 - Author Avatar Style
+******
+
 */
