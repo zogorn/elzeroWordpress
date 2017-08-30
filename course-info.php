@@ -69,5 +69,10 @@
    - count_user_posts(userID);
    - the_author_posts_link();
 ******
+******
+81 - Author Posts Page
+   - create author.php => @root dir
+   - basic information from last Authors epics
+******
 
 */
